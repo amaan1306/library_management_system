@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Return Book</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Return Book</h1>
+    <button onclick="window.location.href='/transactions.html'">Back to Transactions</button>
+  </header>
+  <main>
+    <form id="returnBookForm">
+      <label for="bookTitle">Enter Book Title:</label>
+      <input type="text" id="bookTitle" placeholder="Book Title" required>
+      <button type="submit">Return Book</button>
+    </form>
+    <p id="returnResult"></p>
+  </main>
+  <script>
+    document.getElementById('returnBookForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const bookTitle = document.getElementById('bookTitle').value;
+      // Simulate an API call to return the book
+      document.getElementById('returnResult').innerText = 
+        `The book "${bookTitle}" has been returned successfully.`;
+    });
+  </script>
+</body>
+</html>

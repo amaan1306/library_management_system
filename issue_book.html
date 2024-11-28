@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue Book</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Issue Book</h1>
+    <button onclick="window.location.href='/transactions.html'">Back to Transactions</button>
+  </header>
+  <main>
+    <form id="issueBookForm">
+      <label for="bookTitle">Enter Book Title:</label>
+      <input type="text" id="bookTitle" placeholder="Book Title" required>
+      <button type="submit">Issue Book</button>
+    </form>
+    <p id="issueResult"></p>
+  </main>
+  <script>
+    document.getElementById('issueBookForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const bookTitle = document.getElementById('bookTitle').value;
+      // Simulate an API call to issue the book
+      document.getElementById('issueResult').innerText = 
+        `The book "${bookTitle}" has been issued successfully.`;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Book Available?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Is Book Available?</h1>
+    <button onclick="window.location.href='/transactions.html'">Back to Transactions</button>
+  </header>
+  <main>
+    <form id="checkAvailabilityForm">
+      <label for="bookTitle">Enter Book Title:</label>
+      <input type="text" id="bookTitle" placeholder="Book Title" required>
+      <button type="submit" class="btn">Check Availability</button>
+    </form>
+    <p id="availabilityResult"></p>
+  </main>
+  <script>
+    document.getElementById('checkAvailabilityForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const bookTitle = document.getElementById('bookTitle').value;
+      // Simulate an API call or database query
+      document.getElementById('availabilityResult').innerText = 
+        bookTitle.toLowerCase() === 'sample book' 
+          ? `The book "${bookTitle}" is available.` 
+          : `The book "${bookTitle}" is not available.`;
+    });
+  </script>
+</body>
+</html>

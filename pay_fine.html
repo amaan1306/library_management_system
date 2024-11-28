@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Fine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Pay Fine</h1>
+    <button onclick="window.location.href='/transactions.html'">Back to Transactions</button>
+  </header>
+  <main>
+    <form id="payFineForm">
+      <label for="fineAmount">Enter Fine Amount:</label>
+      <input type="number" id="fineAmount" placeholder="Fine Amount" required>
+      <button type="submit">Pay Fine</button>
+    </form>
+    <p id="paymentResult"></p>
+  </main>
+  <script>
+    document.getElementById('payFineForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fineAmount = document.getElementById('fineAmount').value;
+      // Simulate an API call to pay the fine
+      document.getElementById('paymentResult').innerText = 
+        `A fine of ₹${fineAmount} has been paid successfully.`;
+    });
+  </script>
+</body>
+</html>
