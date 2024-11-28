@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System - Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+            
+          </nav>
+          <a class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <b><span class="ml-3 text-xl"  >Library Management System</span></b>
+          </a>
+          <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+          </div>
+        </div>
+      </header>
+    
+  <div class="login-container">
+    <h1>Library Management System</h1>
+    <form id="loginForm">
+      <label for="userId">User ID</label>
+      <input type="text" id="userId" placeholder="Enter User ID" required>
+      
+      <label for="password">Password</label>
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button type="button" class="toggle-password" onclick="togglePassword()">👁</button>
+      </div>
+
+      <label for="role">Login As</label>
+      <select id="role" required>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+  <script src="user.js"></script>
+</body>
+</html>
